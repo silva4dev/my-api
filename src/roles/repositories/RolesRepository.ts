@@ -11,7 +11,7 @@ export class RolesRepository {
     this.roles = []
   }
 
-  create({ name }: CreateRoleDTO) {
+  create({ name }: CreateRoleDTO): Role {
     const role = new Role()
 
     Object.assign(role, {
@@ -21,5 +21,9 @@ export class RolesRepository {
 
     this.roles.push(role)
     return role
+  }
+
+  findAll(): Role[] {
+    return this.roles
   }
 }
