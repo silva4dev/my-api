@@ -1,7 +1,5 @@
-import {
-  RolesPaginateProperties,
-  RolesRepository,
-} from '@roles/repositories/RolesRepository'
+import { RolesPaginateProperties } from '@roles/repositories/IRolesRepository'
+import { RolesRepository } from '@roles/repositories/RolesRepository'
 
 type ListRolesUseCaseParams = {
   limit: number
