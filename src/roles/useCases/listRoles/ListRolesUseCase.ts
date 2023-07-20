@@ -5,11 +5,11 @@ import {
 import { inject, injectable } from 'tsyringe'
 
 type ListRolesUseCaseParams = {
-  limit: number
   page: number
+  limit: number
 }
 
-injectable()
+@injectable()
 export class ListRolesUseCase {
   constructor(
     @inject('RolesRepository')
