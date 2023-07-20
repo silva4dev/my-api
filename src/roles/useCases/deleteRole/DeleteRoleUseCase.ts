@@ -1,4 +1,4 @@
-import { RolesRepository } from '@roles/repositories/RolesRepository'
+import { IRolesRepository } from '@roles/repositories/IRolesRepository'
 import { AppError } from '@shared/errors/AppError'
 import { inject, injectable } from 'tsyringe'
 
@@ -10,7 +10,7 @@ type DeleteRoleParams = {
 export class DeleteRoleUseCase {
   constructor(
     @inject('RolesRepository')
-    private rolesRepository: RolesRepository,
+    private rolesRepository: IRolesRepository,
   ) {}
 
   async execute({ id }: DeleteRoleParams): Promise<void> {
