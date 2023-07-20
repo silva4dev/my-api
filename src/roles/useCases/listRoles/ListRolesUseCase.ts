@@ -1,5 +1,7 @@
-import { RolesPaginateProperties } from '@roles/repositories/IRolesRepository'
-import { RolesRepository } from '@roles/repositories/RolesRepository'
+import {
+  IRolesRepository,
+  RolesPaginateProperties,
+} from '@roles/repositories/IRolesRepository'
 import { inject, injectable } from 'tsyringe'
 
 type ListRolesUseCaseParams = {
@@ -11,7 +13,7 @@ injectable()
 export class ListRolesUseCase {
   constructor(
     @inject('RolesRepository')
-    private rolesRepository: RolesRepository,
+    private rolesRepository: IRolesRepository,
   ) {}
 
   async execute({
